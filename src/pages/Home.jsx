@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
 import { CustomButton } from "../components";
@@ -10,6 +9,7 @@ import {
   headTextAnimation,
   slideAnimation,
 } from "../config/motion";
+import Background3D from "../components/Background";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -18,6 +18,7 @@ const Home = () => {
     <AnimatePresence>
       {snap.current === "home" && (
         <>
+         <Background3D />
           {/* ✅ New 3D CSS Pattern Background Layer */}
           <motion.div
             className="home-bg-pattern"
